@@ -10,7 +10,9 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class HomeDecorViewController: UIViewController, ARSCNViewDelegate {
+    
+    var shipScene:SCNScene!
 
     @IBOutlet var sceneView: ARSCNView!
     
@@ -25,8 +27,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Create a new scene
         let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
+
+        shipScene = scene
         sceneView.scene = scene
     }
     
@@ -72,4 +74,41 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else {
+            return
+        }
+        
+        let results = sceneView.hitTest(touch.location(in: sceneView), types: [.featurePoint])
+        
+        guard let hitFeature = results.last else {
+            return
+        }
+        
+        let hitTransform = SCNMatrix4(hitFeature.worldTransform)
+        let hitPosition = SCNVector3Make(hitTransform.m41, hitTransform.m42, hitTransform.m43)
+        placeFurniture(position: hitPosition)
+        
+    }
+    
+    
+    
+    func placeFurniture(position:SCNVector3) {
+        let shipNode = shipScene.rootNode.childNode(withName: "ship", recursively: true)
+        shipNode?.position = position
+        
+        let lampScene = SCNScene(named: "art.scnassets/lamp.scn")!
+        
+        let lampNode = lampScene.rootNode.childNode(withName: "lamp", recursively: true)
+        lampNode?.position = position
+
+//        let rotate = SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: CGFloat(0.1*Double.pi), z: 0, duration: 0.5))
+//
+//        shipNode?.runAction(rotate)
+        
+        sceneView.scene.rootNode.addChildNode(lampNode!)
+        
+    }
+    
 }

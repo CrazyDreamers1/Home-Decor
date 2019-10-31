@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE6BAC942369AC6B0054C80F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6BAC932369AC6B0054C80F /* AppDelegate.swift */; };
 		CE6BAC962369AC6B0054C80F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6BAC952369AC6B0054C80F /* art.scnassets */; };
-		CE6BAC982369AC6B0054C80F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6BAC972369AC6B0054C80F /* ViewController.swift */; };
+		CE6BAC982369AC6B0054C80F /* HomeDecorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6BAC972369AC6B0054C80F /* HomeDecorViewController.swift */; };
 		CE6BAC9B2369AC6B0054C80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6BAC992369AC6B0054C80F /* Main.storyboard */; };
 		CE6BAC9D2369AC6C0054C80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6BAC9C2369AC6C0054C80F /* Assets.xcassets */; };
 		CE6BACA02369AC6C0054C80F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6BAC9E2369AC6C0054C80F /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		CE6BAC902369AC6B0054C80F /* Home Decor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home Decor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6BAC932369AC6B0054C80F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE6BAC952369AC6B0054C80F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		CE6BAC972369AC6B0054C80F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE6BAC972369AC6B0054C80F /* HomeDecorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDecorViewController.swift; sourceTree = "<group>"; };
 		CE6BAC9A2369AC6B0054C80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE6BAC9C2369AC6C0054C80F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE6BAC9F2369AC6C0054C80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE1481D4236B25B50028BE76 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE6BAC972369AC6B0054C80F /* HomeDecorViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		CE6BAC872369AC6B0054C80F = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +64,9 @@
 		CE6BAC922369AC6B0054C80F /* Home Decor */ = {
 			isa = PBXGroup;
 			children = (
+				CE1481D4236B25B50028BE76 /* Controllers */,
 				CE6BAC932369AC6B0054C80F /* AppDelegate.swift */,
 				CE6BAC952369AC6B0054C80F /* art.scnassets */,
-				CE6BAC972369AC6B0054C80F /* ViewController.swift */,
 				CE6BAC992369AC6B0054C80F /* Main.storyboard */,
 				CE6BAC9C2369AC6C0054C80F /* Assets.xcassets */,
 				CE6BAC9E2369AC6C0054C80F /* LaunchScreen.storyboard */,
@@ -139,7 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6BAC982369AC6B0054C80F /* ViewController.swift in Sources */,
+				CE6BAC982369AC6B0054C80F /* HomeDecorViewController.swift in Sources */,
 				CE6BAC942369AC6B0054C80F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +293,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78X27C8U99;
 				INFOPLIST_FILE = "Home Decor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78X27C8U99;
 				INFOPLIST_FILE = "Home Decor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
